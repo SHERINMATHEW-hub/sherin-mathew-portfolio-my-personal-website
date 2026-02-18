@@ -124,59 +124,61 @@ a { color: var(--brand); text-decoration: none; transition: all 0.2s; }
   background: white; border: 3px solid var(--brand); border-radius: 50%;
 }
 
-/* CONTACT (UPDATED) */
+/* 
+   ============================
+   CONTACT SECTION (FIXED)
+   ============================
+   Updated to force "Left Text / Right Form" layout
+*/
 .contact-section {
     padding: 80px 0;
-    background-color: #f3f4f6; /* Light Grey background for section */
+    background-color: #f9fafb; /* Very light grey */
 }
 
 .contact-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin-top: 20px;
+    justify-content: space-between; /* This pushes Text Left and Form Right */
+    align-items: flex-start; /* Aligns them at the top */
+    gap: 60px; /* Space in the middle */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* Left side info */
 .contact-info {
-    text-align: left;
     flex: 1;
-    min-width: 300px;
     max-width: 400px;
+    padding-top: 10px; /* Visual alignment with form top */
 }
-.contact-info h3 { margin-top: 0; color: var(--header-text); }
-.contact-info p { margin-bottom: 12px; font-size: 1.05rem; }
+.contact-info h2 { color: var(--header-text); font-size: 2rem; margin-bottom: 10px; }
+.contact-info .sub-text { color: var(--muted); margin-bottom: 30px; font-size: 1.1rem; }
+.contact-list { list-style: none; padding: 0; }
+.contact-list li { margin-bottom: 16px; font-size: 1.05rem; display: flex; gap: 10px; color: var(--text); }
+.contact-list strong { color: var(--header-text); min-width: 60px; }
 
 /* Right side Form Card */
 .contact-form {
+    flex: 1;
     background: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Nice floating effect */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Clean floating shadow */
     display: flex;
     flex-direction: column;
     gap: 15px;
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px;
-}
-
-.contact-form label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: -10px;
+    max-width: 480px;
+    width: 100%;
 }
 
 .contact-form input, 
 .contact-form textarea {
-    padding: 12px;
+    padding: 14px;
     border: 1px solid var(--border);
     border-radius: 6px;
     width: 100%;
     background: #f9fafb;
     font-family: inherit;
+    font-size: 0.95rem;
     transition: 0.2s;
 }
 
@@ -185,14 +187,14 @@ a { color: var(--brand); text-decoration: none; transition: all 0.2s; }
     outline: none;
     border-color: var(--brand);
     background: white;
-    box-shadow: 0 0 0 3px var(--brand-light);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
 .contact-form button {
     background-color: var(--brand);
     color: white;
     border: none;
-    padding: 12px;
+    padding: 14px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 700;
@@ -211,9 +213,25 @@ a { color: var(--brand); text-decoration: none; transition: all 0.2s; }
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
-  .contact-container { flex-direction: column; align-items: center; }
-  .contact-info { text-align: center; }
+  
+  /* Stack Contact section on tablets/phones */
+  .contact-container { 
+      flex-direction: column; 
+      align-items: center; 
+      gap: 40px;
+  }
+  .contact-info { 
+      text-align: center; 
+      max-width: 100%;
+  }
+  .contact-list li {
+      justify-content: center; /* Center list items on mobile */
+  }
+  .contact-form {
+      width: 100%;
+  }
 }
+
 @media (max-width: 640px) {
   .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0;
     background: #fff; flex-direction: column; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
