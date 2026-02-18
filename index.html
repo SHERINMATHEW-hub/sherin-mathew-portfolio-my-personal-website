@@ -7,7 +7,7 @@
   <meta name="description" content="Portfolio of Sherin Mathew: MBA student specializing in Finance, Marketing, and Data Analytics." />
   
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   
@@ -36,7 +36,6 @@
         <a href="#projects">Projects</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
-        <!-- CORRECTED PATH -->
         <a class="btn small" href="assets/Sherin_Mathew_resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
     </div>
@@ -65,7 +64,6 @@
         
         <!-- HERO PHOTO -->
         <div class="hero-photo">
-          <!-- CORRECTED PATH -->
           <img src="images/profile.png" alt="Sherin Mathew" class="big-profile-pic">
         </div>
       </div>
@@ -168,7 +166,6 @@
         
         <div class="grid">
           <article class="card" data-tags="python, data">
-            <!-- IMPORTANT: Make sure you have an "images/dashboard.gif" file for this to work -->
             <img src="images/dashboard.gif" alt="Sales Dashboard Animation" class="thumb">
             <div class="card-body">
               <h3>Sales Dashboard App</h3>
@@ -220,7 +217,6 @@
               <p class="meta">Deloitte · May 2025</p>
             </div>
             <div class="card-actions">
-              <!-- CORRECTED PATH -->
               <a href="assets/Deloitte data anaysics certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
             </div>
           </article>
@@ -231,7 +227,6 @@
               <p class="meta">IBM · 2024</p>
             </div>
             <div class="card-actions">
-              <!-- CORRECTED PATH -->
               <a href="assets/IBM DA0101EN Certificate _ Cognitive Class (1).pdf" target="_blank" rel="noopener">View Certificate</a>
             </div>
           </article>
@@ -242,7 +237,6 @@
               <p class="meta">2025</p>
             </div>
              <div class="card-actions">
-               <!-- CORRECTED PATH -->
               <a href="assets/certificate-fotor-20250516225339.pdf" target="_blank" rel="noopener">View Certificate</a>
             </div>
           </article>
@@ -253,7 +247,6 @@
               <p class="meta">Sept 2025</p>
             </div>
             <div class="card-actions">
-              <!-- CORRECTED PATH -->
               <a href="assets/POWER BI.pdf" target="_blank" rel="noopener">View Certificate</a>
             </div>
           </article>
@@ -264,7 +257,6 @@
               <p class="meta">Sept 2025</p>
             </div>
             <div class="card-actions">
-              <!-- CORRECTED PATH -->
               <a href="assets/Tableau Data Visualization.pdf" target="_blank" rel="noopener">View Certificate</a>
             </div>
           </article>
@@ -275,7 +267,6 @@
               <p class="meta">Apr 2025</p>
             </div>
             <div class="card-actions">
-              <!-- CORRECTED PATH -->
               <a href="assets/prompt engineering.pdf" target="_blank" rel="noopener">View Certificate</a>
             </div>
           </article>
@@ -283,28 +274,29 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
+    <!-- CONTACT SECTION (UPDATED FOR SPLIT LAYOUT) -->
+    <section id="contact" class="contact-section">
       <div class="container">
-        <h2>Contact</h2>
-        <p>Reach me via email or phone.</p>
+        
+        <div class="contact-container">
+          
+          <!-- Left Side: Info -->
+          <div class="contact-info">
+            <h2 class="section-title">Contact</h2>
+            <p class="sub-text">Reach me via email or phone.</p>
+            
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> +91 9142335099</li>
+              <li><strong>Email:</strong> <a href="mailto:sherinmm53@gmail.com">sherinmm53@gmail.com</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sherin-mathew-7366902bb" target="_blank" rel="noopener">View Profile</a></li>
+            </ul>
+          </div>
 
-        <div class="contact-grid">
-          <ul class="contact-list">
-            <li><strong>Phone:</strong> +91 9142335099</li>
-            <li><strong>Email:</strong> <a href="mailto:sherinmm53@gmail.com">sherinmm53@gmail.com</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sherin-mathew-7366902bb" target="_blank" rel="noopener">View Profile</a></li>
-          </ul>
-
-          <!-- Make sure to update this for Netlify Forms later! -->
-          <!-- FOR GITHUB PAGES USERS -->
-          <!-- Replace 'sherinmm53@gmail.com' with your actual email if different -->
-          <!-- NETLIFY FORM SETUP -->
-          <!-- We removed the 'action' link and added 'data-netlify="true"' -->
+          <!-- Right Side: Form Card -->
           <form name="contact" netlify class="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message..." rows="4" required></textarea>
+            <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
             <button type="submit">Send Message</button>
           </form>
 
@@ -320,17 +312,12 @@
   </footer>
 
   <!-- Hidden Netlify Form Registration -->
-<form name="contact" netlify hidden>
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <textarea name="message"></textarea>
-</form>
+  <form name="contact" netlify hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <textarea name="message"></textarea>
+  </form>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
